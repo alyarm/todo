@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TodoAdd from '../TodoAdd/TodoAdd';
 import TodoList from '../TodoList/TodoList';
 import './App.css';
@@ -6,6 +6,18 @@ import './App.css';
 function App() {
 
   const [todos, setTodos] = useState([])
+
+  useEffect(() => {
+    setTodos((
+      JSON.parse(localStorage.getItem('todos'))
+    ))
+
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos))
+  }, [todos])
+
 
   const addTask = (inputValue) => {
     if (inputValue) {
