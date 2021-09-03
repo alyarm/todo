@@ -1,0 +1,53 @@
+.todo-item--completed {
+    text-decoration: line-through;
+}
+
+.todo-item {
+    display: flex;
+    margin: 6px 0 0;
+    transition: all .3s;
+    padding: 4px 6px;
+}
+
+.todo-item:hover {
+    box-shadow: -15px 10px 30px -10px rgba(0, 0, 0, .2);
+}
+
+.todo-item__index {
+    line-height: 130%;
+    font-size: 1.1em;
+}
+
+.todo-item__body {
+    padding-right: 4px;
+    word-wrap: break-word;
+    line-height: 130%;
+}
+
+.todo-item__btn {
+    background: transparent;
+    margin: 0 0 0 5px;
+    font-size: 1.2em;
+    transition: all .1s;
+}
+
+.todo-item__control {
+    flex: 0 0 auto;
+    margin-left: auto;
+}
+
+.todo-item__btn:focus, .todo-item__btn:hover {
+    transform: scale(1.05);
+}
+
+.todo-item__btn--edit:hover, .todo-item__btn--edit:focus {
+    color: #3333CC;
+}
+
+.todo-item__btn--remove:hover, .todo-item__btn--remove:focus {
+    color: #FF0000;
+}
+
+.todo-item__btn--complete:hover, .todo-item__btn--complete:focus {
+    color: #009900;
+}
